@@ -7,11 +7,9 @@
 namespace BEAR\Sunday\Annotation;
 
 /**
- * Db
- *
  * @Annotation
  * @Target("CLASS")
  */
-final class Db implements AnnotationInterface
+final class Db
 {
 }

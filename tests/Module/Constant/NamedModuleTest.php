@@ -2,11 +2,9 @@
 
 namespace BEAR\Sunday\Module\Constant;
 
-use BEAR\Sunday\Module\Constant\NamedModule;
-use Ray\Di\AbstractModule;
-use Ray\Di\Injector;
 use Ray\Di\Di\Inject;
 use Ray\Di\Di\Named;
+use Ray\Di\Injector;
 
 class Application
 {
@@ -50,7 +48,7 @@ class ConstantModuleTest extends \PHPUnit_Framework_TestCase
 
     public function testNamed()
     {
-        $this->assertSame(__DIR__ , $this->app->dir);
-        $this->assertSame('bear' , $this->app->id);
+        $this->assertSame(__DIR__, $this->app->dir);
+        $this->assertSame('bear', $this->app->id);
     }
 }

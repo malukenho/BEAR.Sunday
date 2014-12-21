@@ -7,11 +7,9 @@
 namespace BEAR\Sunday\Annotation;
 
 /**
- * Validation
- *
  * @Annotation
  * @Target("METHOD")
  */
-final class Validate implements AnnotationInterface
+final class Validate
 {
 }

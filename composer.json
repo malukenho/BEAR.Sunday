@@ -17,12 +17,13 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.0",
         "bear/resource": "~1.0@dev",
-        "ray/di": "~2.0@dev",
-        "ray/aop": "~2.0@dev",
+        "doctrine/cache": "~1.0",
         "psr/log": "~1.0"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "BEAR\\Sunday\\": "src/"
@@ -30,7 +31,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-develop-2": "1.0.x-dev"
         }
     }
 }

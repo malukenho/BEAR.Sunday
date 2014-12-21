@@ -3,9 +3,8 @@
 namespace BEAR\Sunday\Inject;
 
 use Psr\Log\LoggerInterface;
-use Ray\Di\Injector;
-use BEAR\Sunday\Inject\PsrLoggerInject;
 use Ray\Di\AbstractModule;
+use Ray\Di\Injector;
 
 class PsrLoggerApplication
 {
@@ -15,7 +14,6 @@ class PsrLoggerApplication
     {
         return $this->logger;
     }
-
 }
 
 class DummyLogger implements LoggerInterface
@@ -62,6 +60,6 @@ class PsrLoggerInjectTest extends \PHPUnit_Framework_TestCase
     public function testInjectTrait()
     {
         $app = (new Injector(new PsrLoggerModule))->getInstance(__NAMESPACE__ . '\PsrLoggerApplication');
-        $this->assertInstanceOf( '\BEAR\Sunday\Inject\DummyLogger', $app->returnDependency());
+        $this->assertInstanceOf('\BEAR\Sunday\Inject\DummyLogger', $app->returnDependency());
     }
 }

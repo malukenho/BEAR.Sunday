@@ -8,9 +8,6 @@ namespace BEAR\Sunday\Module\Constant;
 
 use Ray\Di\AbstractModule;
 
-/**
- * Constants 'Named' module
- */
 class NamedModule extends AbstractModule
 {
     /**
@@ -23,13 +20,13 @@ class NamedModule extends AbstractModule
      */
     public function __construct(array $names)
     {
-        $names += [
-            'sunday_dir' =>dirname(dirname(dirname(dirname(dirname(__DIR__)))))
-        ];
         $this->names = $names;
         parent::__construct();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function configure()
     {
         foreach ($this->names as $annotatedWith => $instance) {
